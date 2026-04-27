@@ -15,12 +15,18 @@ import cv2
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 tf.keras.backend.clear_session()
+def load_old_model(path):
+    return load_model(
+        path,
+        compile=False,
+        custom_objects=None
+    )
 
 # =========================
 # LOAD MODELS
 # =========================
-model_vgg = tf.keras.models.load_model("vgg19.h5",compile=False)
-model_inc = tf.keras.models.load_model("inception.h5",compile=False)
+model_vgg = load_model("vgg19.h5")
+model_inc = load_model("inception.h5")
 
 # =========================
 # GRAD-CAM FUNCTION
