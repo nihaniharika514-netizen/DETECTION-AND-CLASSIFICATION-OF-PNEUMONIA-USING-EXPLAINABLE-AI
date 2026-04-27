@@ -25,8 +25,8 @@ def load_old_model(path):
 # =========================
 # LOAD MODELS
 # =========================
-model_vgg = load_model("vgg19.h5")
-model_inc = load_model("inception.h5")
+model_vgg = load_model("vgg19_fixed_keras")
+model_inc = load_model("inception_fixed.keras")
 
 # =========================
 # GRAD-CAM FUNCTION
