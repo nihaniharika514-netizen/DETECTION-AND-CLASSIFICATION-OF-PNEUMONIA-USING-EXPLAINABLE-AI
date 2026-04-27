@@ -1,6 +1,14 @@
 import gdown
-gdown.download("https://drive.google.com/file/d/1_87fGLSURkfO1Vy0tY8MzF6FokOMhE5l","vgg19.h5",quiet=False)
-gdown.download("https://drive.google.com/file/d/1PpVEJbV3eCpUFVpiec_mFPd_kZ-2qkdM","inception.h5",quiet=False)
+gdown.download(
+    "https://drive.google.com/uc?id=1_87fGLSURkfO1Vy0tY8MzF6FokOMhE5l",
+    "vgg19.h5",
+    quiet=False
+)
+gdown.download(
+    "https://drive.google.com/uc?id=1PpVEJbV3eCpUFVpiec_mFPd_kZ-2qkdM",
+    "inception.h5",
+    quiet=False
+)
 import streamlit as st
 import numpy as np
 import cv2
