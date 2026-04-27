@@ -14,12 +14,13 @@ import numpy as np
 import cv2
 import tensorflow as tf
 from tensorflow.keras.models import load_model
+tf.keras.backend.clear_session()
 
 # =========================
 # LOAD MODELS
 # =========================
-model_vgg = load_model("vgg19.h5")
-model_inc = load_model("inception.h5")
+model_vgg = tf.keras.models.load_model("vgg19.h5",compile=False)
+model_inc = tf.keras.models.load_model("inception.h5",compile=False)
 
 # =========================
 # GRAD-CAM FUNCTION
